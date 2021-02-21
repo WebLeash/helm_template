@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: my-website
-  name: my-website
+    app: my-websitev1
+  name: my-websitev1
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: my-website
+      app: my-websitev1
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: my-website
+        app: my-websitev1
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: {{ .Values.image }}
+        name: v1
         resources: {}
 status: {}
