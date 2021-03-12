@@ -1,2 +1,2 @@
 replicaCount: 1
-image: harbor.domain/development/webleash:v4
+image: webleash/cont_web_site:v1
